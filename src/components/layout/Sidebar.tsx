@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { 
@@ -66,9 +67,13 @@ export function Sidebar() {
       {/* Brand Header */}
       <div className="p-6 border-b border-zinc-900 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20">
-            <span className="font-display font-bold text-sm">M</span>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Momentum OS Logo"
+            width={32}
+            height={32}
+            className="rounded-lg shadow-md shadow-indigo-500/10 object-cover"
+          />
           <span className="font-display font-bold text-lg text-zinc-100 tracking-tight">Momentum</span>
         </Link>
         
